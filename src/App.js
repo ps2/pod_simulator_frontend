@@ -26,7 +26,7 @@ function App() {
     connect((newState) => {
       setPodState(newState)
       setReservoir(newState.ReservoirLevel)
-      setAlertMask(newState.Alerts)
+      setAlertMask(newState.ActiveAlertSlots)
       console.log("New pod state:", newState)
     });
   }, [])
@@ -63,6 +63,9 @@ function App() {
     event.preventDefault();
   };
 
+  function dec2bin(dec) {
+    return (dec >>> 0).toString(2);
+  }
 
   return (
     <div className="App">
@@ -77,7 +80,7 @@ function App() {
       <div className="group">
         <h3>Pod State</h3>
         <div><span className="var">Reservoir</span> <span className="val">{podState.ReservoirLevel}</span></div>
-        <div><span className="var">Alerts</span> <span>{podState.Alerts}</span></div>
+        <div><span className="var">ActiveAlertSlots</span> <span>0b{dec2bin(podState.ActiveAlertSlots)}</span></div>
         <div><span className="var">Bolusing</span> <span>{podState.Bolusing ? "Yes" : "No"}</span></div>
         <div><span className="var">TempBasalRunning</span> <span>{podState.TempBasalRunning ? "Yes" : "No"}</span></div>
         <div><span className="var">BasalRunning</span> <span>{podState.BasalRunning ? "Yes" : "No"}</span></div>
