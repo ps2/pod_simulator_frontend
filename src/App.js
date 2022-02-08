@@ -9,6 +9,7 @@ function App() {
   const [podState, setPodState] = useState({});
   const [reservoir, setReservoir] = useState(0);
   const [alertMask, setAlertMask] = useState(0);
+  const [selectedAlerts, setSelectedAlerts] = useState([]);
   const [reservoirInputError, setReservoirInputError] = useState("");
 
   const options = [
@@ -27,6 +28,15 @@ function App() {
       setPodState(newState)
       setReservoir(newState.ReservoirLevel)
       setAlertMask(newState.ActiveAlertSlots)
+
+      var selected = []
+      for (let i = 0; i < 8; i++) {
+        if ((newState.ActiveAlertSlots & (1<<i)) != 0) {
+          selected.push(options[i])
+        }
+      }
+      setSelectedAlerts(selected)
+
       console.log("New pod state:", newState)
     });
   }, [])
@@ -41,7 +51,6 @@ function App() {
     if (val < 0 || val > 200) {
       setReservoirInputError("Bounds error")
     } else {
-      console.log("changeReservoir");
       sendMsg({"command": "changeReservoir", "value": val});
     }
     event.preventDefault();
@@ -100,7 +109,7 @@ function App() {
 
       <div className="group">
         <h3>Active Alerts</h3>
-        <Select className="basic-multi-select" isMulti options={options} onChange={alertsChanged} />
+        <Select className="basic-multi-select" isMulti options={options} onChange={alertsChanged} value={selectedAlerts} />
         <button onClick={sendAlertsChange}>
           Set Alerts
         </button>
