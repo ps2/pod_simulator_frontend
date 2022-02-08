@@ -65,6 +65,7 @@ function App() {
     }
     console.log("newAlertMask = ", newAlertMask);
     setAlertMask(newAlertMask)
+    setSelectedAlerts(newValue)
   }
 
   function sendAlertsChange(event) {
