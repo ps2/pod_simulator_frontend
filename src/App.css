@@ -24,15 +24,36 @@
   color: white;
 }
 
+h3 {
+  margin-top: 0px;
+}
+
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.group {
+  padding: 20px;
+  text-align: left;
+  max-width: 300px;
+  margin: 10px auto;
+  border: 1px solid black;
+}
+
+.group .var {
+  font-weight: bold;
+  color: #818181
+}
+
+.group .val {
+  text-align: right;
+}
+
+.group button {
+  margin: 10px;
+}
+
+.alert {
+  max-width: 300px;
+  margin: 10px auto;
 }
