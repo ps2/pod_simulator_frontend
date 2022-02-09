@@ -1,0 +1,482 @@
+[
+    {
+        "code": "0x01",
+        "description": "Flash erase failed"
+    },
+    {
+        "code": "0x02",
+        "description": "Flash store failed"
+    },
+    {
+        "code": "0x03",
+        "description": "Basal subcommand table corruption"
+    },
+    {
+        "code": "0x05",
+        "description": "Basal step corruption"
+    },
+    {
+        "code": "0x06",
+        "description": "RTC interrupt or pump encoder table corruption"
+    },
+    {
+        "code": "0x07",
+        "description": "Wire overdriven timeout"
+    },
+    {
+        "code": "0x08",
+        "description": "Invalid beep value"
+    },
+    {
+        "code": "0x09",
+        "description": "Invalid beep repeat pattern value"
+    },
+    {
+        "code": "0x0A",
+        "description": "Temp basal step corruption"
+    },
+    {
+        "code": "0x0B",
+        "description": "Temp basal subcommand table corruption"
+    },
+    {
+        "code": "0x0D",
+        "description": "Reset due to COP"
+    },
+    {
+        "code": "0x0E",
+        "description": "Reset due to illegal opcode"
+    },
+    {
+        "code": "0x0F",
+        "description": "Reset due to illegal address"
+    },
+    {
+        "code": "0x10",
+        "description": "Reset due to SAWCOP Safety check"
+    },
+    {
+        "code": "0x11",
+        "description": "Bolus step corruption"
+    },
+    {
+        "code": "0x12",
+        "description": "Reset due to Low Voltage Detect"
+    },
+    {
+        "code": "0x13",
+        "description": "Message length too long"
+    },
+    {
+        "code": "0x14",
+        "description": "Occluded Reported as \"Occlusion detected\""
+    },
+    {
+        "code": "0x15",
+        "description": "Bolus program corruption"
+    },
+    {
+        "code": "0x16",
+        "description": "Bolus log corruption Safety check"
+    },
+    {
+        "code": "0x17",
+        "description": "Corruption in a validated table"
+    },
+    {
+        "code": "0x18",
+        "description": "Reservoir empty or exceeded maximum pulse delivery Reported as \"Empty reservoir\""
+    },
+    {
+        "code": "0x19",
+        "description": "Load error before starting pulse"
+    },
+    {
+        "code": "0x1A",
+        "description": "Power Switch Array problem before starting pulse"
+    },
+    {
+        "code": "0x1B",
+        "description": "Tick count unexpectedly not zero when starting pulse"
+    },
+    {
+        "code": "0x1C",
+        "description": "Exceeded maximum Pod life of 80 hours Reported as \"Pod expired\""
+    },
+    {
+        "code": "0x1D",
+        "description": "Commissioned bit unexpectedly not set"
+    },
+    {
+        "code": "0x1E",
+        "description": "Unexpected commissioned state upon reset"
+    },
+    {
+        "code": "0x1F",
+        "description": "Alerts table corruption"
+    },
+    {
+        "code": "0x20",
+        "description": "Validate encoder count error when bolusing"
+    },
+    {
+        "code": "0x21",
+        "description": "Bad timer variable state"
+    },
+    {
+        "code": "0x22",
+        "description": "Unexpected RTC Modulo Register value during reset"
+    },
+    {
+        "code": "0x23",
+        "description": "Calibrate timer problem"
+    },
+    {
+        "code": "0x25",
+        "description": "Tick interrupt handler unexpectedly called"
+    },
+    {
+        "code": "0x27",
+        "description": "Failed to set up alerts for tank fill operation"
+    },
+    {
+        "code": "0x28",
+        "description": "Bad arg or state"
+    },
+    {
+        "code": "0x29",
+        "description": "Alert #0 auto-off timeout Auto-off"
+    },
+    {
+        "code": "0x2A",
+        "description": "Alert #1 auto-off timeout Not used"
+    },
+    {
+        "code": "0x2B",
+        "description": "Alert #2 auto-off timeout Not used"
+    },
+    {
+        "code": "0x2C",
+        "description": "Alert #3 auto-off timeout Not used"
+    },
+    {
+        "code": "0x2D",
+        "description": "Alert #4 auto-off timeout Not used"
+    },
+    {
+        "code": "0x2E",
+        "description": "Alert #5 auto-off timeout Not used"
+    },
+    {
+        "code": "0x2F",
+        "description": "Alert #6 auto-off timeout Not used"
+    },
+    {
+        "code": "0x30",
+        "description": "Alert #7 auto-off timeout Not used"
+    },
+    {
+        "code": "0x31",
+        "description": "Incorrect pod state for command"
+    },
+    {
+        "code": "0x32",
+        "description": "Bad COP value during startup testing"
+    },
+    {
+        "code": "0x33",
+        "description": "Multi Command Timeout Fault"
+    },
+    {
+        "code": "0x34",
+        "description": "Reset from unknown cause More likely on third day of use due to low batteries and/or static electricity"
+    },
+    {
+        "code": "0x35",
+        "description": "SAW Veto Status unexpectedly not set"
+    },
+    {
+        "code": "0x36",
+        "description": "External pin reset with incorrect pod progress"
+    },
+    {
+        "code": "0x37",
+        "description": "Bad beep pattern state variable"
+    },
+    {
+        "code": "0x38",
+        "description": "Unexpected wire state"
+    },
+    {
+        "code": "0x39",
+        "description": "Bad variable value for LOAD1/LOAD2 test"
+    },
+    {
+        "code": "0x3A",
+        "description": "Invalid value in message processing"
+    },
+    {
+        "code": "0x3B",
+        "description": "SAW reset testing failure"
+    },
+    {
+        "code": "0x3C",
+        "description": "MCP COP testing failure"
+    },
+    {
+        "code": "0x3D",
+        "description": "Problem with step sensor pump anchor"
+    },
+    {
+        "code": "0x3E",
+        "description": "Flash initialization or write error"
+    },
+    {
+        "code": "0x40",
+        "description": "Encoder open count too high Probable pump issue"
+    },
+    {
+        "code": "0x41",
+        "description": "Encoder count excessive variance"
+    },
+    {
+        "code": "0x42",
+        "description": "Encoder count too low Safety check"
+    },
+    {
+        "code": "0x43",
+        "description": "Encoder count problem"
+    },
+    {
+        "code": "0x44",
+        "description": "Open load wire 1 detected Software or hardware failure in Pod"
+    },
+    {
+        "code": "0x45",
+        "description": "Open load wire 2 detected Software or hardware failure in Pod"
+    },
+    {
+        "code": "0x46",
+        "description": "Problem with Power Switch Array Status and Control Register values"
+    },
+    {
+        "code": "0x47",
+        "description": "Problem with SAW VETO"
+    },
+    {
+        "code": "0x48",
+        "description": "Bad timer calibration"
+    },
+    {
+        "code": "0x49",
+        "description": "Bad timer high value"
+    },
+    {
+        "code": "0x4A",
+        "description": "Bad timer period value"
+    },
+    {
+        "code": "0x4B",
+        "description": "Bad ICS trim value"
+    },
+    {
+        "code": "0x4C",
+        "description": "Unable to trim ICS correctly"
+    },
+    {
+        "code": "0x4D",
+        "description": "Bad timer calibration mode"
+    },
+    {
+        "code": "0x4E",
+        "description": "SAW trim error Safety check"
+    },
+    {
+        "code": "0x4F",
+        "description": "Unexpected RF transmission error set during reset"
+    },
+    {
+        "code": "0x50",
+        "description": "Timer Pulse-width Modulator 2 overflow Static electricity"
+    },
+    {
+        "code": "0x51",
+        "description": "Bad state before starting pump"
+    },
+    {
+        "code": "0x52",
+        "description": "Out of Lock Status Latch"
+    },
+    {
+        "code": "0x53",
+        "description": "Wrong Rx sensitively value"
+    },
+    {
+        "code": "0x54",
+        "description": "Packet frame length too long"
+    },
+    {
+        "code": "0x55",
+        "description": "Unexpected IRQ high"
+    },
+    {
+        "code": "0x56",
+        "description": "Unexpected IRQ low"
+    },
+    {
+        "code": "0x57",
+        "description": "Pump check table corrupt"
+    },
+    {
+        "code": "0x58",
+        "description": "Bad pump check table parameters"
+    },
+    {
+        "code": "0x59",
+        "description": "Error updating pump check table"
+    },
+    {
+        "code": "0x5A",
+        "description": "Pump check table values too high"
+    },
+    {
+        "code": "0x5B",
+        "description": "Pump check table corruption"
+    },
+    {
+        "code": "0x5C",
+        "description": "Prime open count too low Problem with a safety check after priming"
+    },
+    {
+        "code": "0x5D",
+        "description": "Bad RF Carrier Detect Threshold"
+    },
+    {
+        "code": "0x5E",
+        "description": "Write flash byte to disable flash security failed"
+    },
+    {
+        "code": "0x5F",
+        "description": "Both wire 1 and wire 2 open before starting pump"
+    },
+    {
+        "code": "0x60",
+        "description": "Timed pump check startup problem 1 Possible pump issue/occlusion"
+    },
+    {
+        "code": "0x61",
+        "description": "Timed pump check startup problem 2 Possible pump issue/occlusion"
+    },
+    {
+        "code": "0x62",
+        "description": "Timed pump check excess timeouts 1 Possible pump issue/occlusion"
+    },
+    {
+        "code": "0x66",
+        "description": "Timed pump check excess timeouts 2 Possible pump issue/occlusion"
+    },
+    {
+        "code": "0x67",
+        "description": "Timed pump check excess timeouts 3 Possible pump issue/occlusion"
+    },
+    {
+        "code": "0x68",
+        "description": "Timed pump check pulse issue Possible pump issue/occlusion"
+    },
+    {
+        "code": "0x69",
+        "description": "Timed pump check bolus problem Possible pump issue/occlusion"
+    },
+    {
+        "code": "0x6A",
+        "description": "Timed pump check above threshold Possible pump issue/occlusion"
+    },
+    {
+        "code": "0x80",
+        "description": "Basal under infusion"
+    },
+    {
+        "code": "0x81",
+        "description": "Basal over infusion"
+    },
+    {
+        "code": "0x82",
+        "description": "Temp basal under infusion"
+    },
+    {
+        "code": "0x83",
+        "description": "Temp basal over infusion"
+    },
+    {
+        "code": "0x84",
+        "description": "Bolus under infusion"
+    },
+    {
+        "code": "0x85",
+        "description": "Bolus over infusion"
+    },
+    {
+        "code": "0x86",
+        "description": "Basal over infusion pulse"
+    },
+    {
+        "code": "0x87",
+        "description": "Temp basal over infusion pulse"
+    },
+    {
+        "code": "0x88",
+        "description": "Bolus over infusion pulse"
+    },
+    {
+        "code": "0x89",
+        "description": "Immediate bolus under infusion pulse"
+    },
+    {
+        "code": "0x8A",
+        "description": "Extended bolus over infusion pulse"
+    },
+    {
+        "code": "0x8B",
+        "description": "Insulin schedule table corruption"
+    },
+    {
+        "code": "0x8D",
+        "description": "Bad pulse type parameter"
+    },
+    {
+        "code": "0x8E",
+        "description": "Sync request with no active temp basal"
+    },
+    {
+        "code": "0x8F",
+        "description": "Insulin command parse unexpectedly failed"
+    },
+    {
+        "code": "0x90",
+        "description": "Bad Insulin Schedule Table selection parameter"
+    },
+    {
+        "code": "0x91",
+        "description": "Basal pulse request with no active basal insulin schedule"
+    },
+    {
+        "code": "0x92",
+        "description": "Temp basal pulse request with no active temp basal insulin schedule"
+    },
+    {
+        "code": "0x93",
+        "description": "Bolus pulse request with with no active bolus insulin schedule"
+    },
+    {
+        "code": "0x95",
+        "description": "Bad insulin command table specification"
+    },
+    {
+        "code": "0x96",
+        "description": "Bolus termination with incorrect values"
+    },
+    {
+        "code": "0x97",
+        "description": "Bad open transitions pod progress or count"
+    }
+]
