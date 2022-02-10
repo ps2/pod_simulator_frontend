@@ -1,6 +1,6 @@
-# Getting Started the Pod Simulator UI
+# Getting Started with the Pod Simulator UI
 
-This is a UI frontend for the raspberry pi based [pod simulator](https://github.com/LoopKit/pod). You will need to have an instance of that running before you can use this UI.
+This is a UI frontend for the raspberry pi based [pod simulator](https://github.com/LoopKit/pod). You will need to have an instance of that running before you can use this UI. You'll also need to [install a recent version of Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ## Configuration
 
@@ -23,3 +23,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+If you restart your pod simulator, you will need to refresh your web page to get a connection to the new simulator.
