@@ -106,6 +106,18 @@ function App() {
     event.preventDefault();
   };
 
+  function sendCrashNextCommand(beforeProcessing) {
+    sendMsg({"command": "crashNextCommand", "beforeProcessing": beforeProcessing});
+  }
+
+  function crashBeforeProcessing() {
+    sendCrashNextCommand(true);
+  }
+
+  function crashAfterProcessing() {
+    sendCrashNextCommand(false);
+  }
+
   function dec2bin(dec) {
     return (dec >>> 0).toString(2);
   }
@@ -170,6 +182,16 @@ function App() {
         <Select options={faultOptions} onChange={faultChanged} value={selectedFault} />
         <button onClick={sendFault} disabled={selectedFault == null}>
           Trigger Fault
+        </button>
+      </div>
+
+      <div className="group">
+        <h3>Unacknowledged Command Helper</h3>
+        <button onClick={crashBeforeProcessing}>
+          Crash before processing next command
+        </button>
+        <button onClick={crashAfterProcessing}>
+          Crash after processing next command
         </button>
       </div>
 
