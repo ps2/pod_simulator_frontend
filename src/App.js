@@ -78,12 +78,12 @@ function App() {
   }
 
   function faultChanged(newValue) {
-    setSelectedFault(newValue.value)
+    setSelectedFault(newValue)
   }
 
   function sendFault() {
     if (selectedFault) {
-      sendMsg({"command": "setFault", "value": selectedFault});
+      sendMsg({"command": "setFault", "value": selectedFault.value});
     }
   }
 
