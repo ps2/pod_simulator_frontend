@@ -153,6 +153,7 @@ function App() {
         <h3>Comms</h3>
         <div><span className="var">MsgSeq</span> <span>{podState.MsgSeq}</span></div>
         <div><span className="var">CmdSeq</span> <span>{podState.CmdSeq}</span></div>
+        <div><span className="var">LastProgSeqNum</span> <span>{podState.LastProgSeqNum}</span></div>
         <div><span className="var">LTK</span> <span>{podState.LTK}</span></div>
         <div><span className="var">EapAkaSeq</span> <span>{podState.EapAkaSeq}</span></div>
         <div><span className="var">NoncePrefix</span> <span>{podState.NoncePrefix}</span></div>
