@@ -12,6 +12,7 @@ function App() {
   const [alertMask, setAlertMask] = useState(0);
   const [selectedAlerts, setSelectedAlerts] = useState([]);
   const [selectedFault, setSelectedFault] = useState();
+  const [activeTime, setActiveTime] = useState("");
   const [reservoirInputError, setReservoirInputError] = useState("");
 
   const alertOptions = [
@@ -48,6 +49,10 @@ function App() {
         }
       }
 
+      const activationDate = new Date(newState.ActivationTime);
+      const activeTimeMinutes = Math.round(((new Date()) - activationDate) / 60000);
+      setActiveTime(activeTimeMinutes.toString());
+
       console.log("New pod state:", newState)
     });
   }, [])
@@ -57,7 +62,7 @@ function App() {
     setReservoirInputError("")
   };
 
-  function sendReservoirChange(event) {
+  function sendReservoir(event) {
     const val = parseFloat(reservoir);
     if (val < 0 || val > 200) {
       setReservoirInputError("Bounds error")
@@ -87,8 +92,17 @@ function App() {
     }
   }
 
-  function sendAlertsChange(event) {
+  function sendAlerts(event) {
     sendMsg({"command": "setAlerts", "value": alertMask});
+    event.preventDefault();
+  };
+
+  function activeTimeChanged(event) {
+    setActiveTime(event.target.value);
+  }
+
+  function sendActiveTime(event) {
+    sendMsg({"command": "setActiveTime", "value": parseInt(activeTime)});
     event.preventDefault();
   };
 
@@ -123,7 +137,7 @@ function App() {
 
       <div className="group">
         <h3>Reservoir</h3>
-        <form onSubmit={sendReservoirChange}>
+        <form onSubmit={sendReservoir}>
           <label>
             <input type="number" value={reservoir} onChange={reservoirInputChanged} />
           </label>
@@ -132,11 +146,21 @@ function App() {
         </form>
       </div>
 
+      <div className="group">
+        <h3>Minutes Since Activation</h3>
+        <form onSubmit={sendActiveTime}>
+          <label>
+            <input type="number" value={activeTime} onChange={activeTimeChanged} />
+          </label>
+          <input type="submit" value="Set Active Time" />
+        </form>
+      </div>
+
 
       <div className="group">
         <h3>Active Alerts</h3>
         <Select className="basic-multi-select" isMulti options={alertOptions} onChange={alertsChanged} value={selectedAlerts} />
-        <button onClick={sendAlertsChange}>
+        <button onClick={sendAlerts}>
           Set Alerts
         </button>
       </div>
