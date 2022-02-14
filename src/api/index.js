@@ -1,5 +1,7 @@
 // api/index.js
-var socket = new WebSocket("ws://rpi.local:8080/ws");
+import ReconnectingWebSocket from 'reconnecting-websocket';
+
+var socket = new ReconnectingWebSocket("ws://rpi.local:8080/ws");
 
 let connect = cb => {
   console.log("Attempting Connection...");
